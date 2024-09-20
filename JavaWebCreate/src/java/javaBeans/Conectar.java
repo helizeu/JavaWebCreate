@@ -44,6 +44,25 @@ ps.executeUpdate(); // Executa o comando SQL
 sql = "use " + this.MeuBanco;
 ps = con.prepareStatement ( sql );
 ps.executeUpdate(); // Executa o comando SQL dentro do servidor 
+
+       sql = "create table if not exists usuarios ( pkuser int AUTO_INCREMENT,"
+                    + "nome varchar(40) not null,"
+                    + "email varchar(40) not null,"
+                    + "senha varchar(10) not null,"
+                    + "celular varchar(20) not null,"
+                    + "nivel varchar(30) not null,"
+                    + "PRIMARY KEY ( pkuser ) ) ";
+            ps = con.prepareStatement(sql);
+            ps.executeUpdate(); // Executa o comando SQL dentro do servidor 
+
+            sql = " create table if not exists professores ("
+                    + "pkProf int AUTO_INCREMENT,"
+                    + "nome varchar(40) not null,"
+                    + "fk_user int not null, "
+                    + "PRIMARY KEY ( pkProf ) )";
+            ps = con.prepareStatement(sql);
+            ps.executeUpdate(); // Executa o comando SQL dentro do servidor 
+
                
 statusSQL = null; // Coloca null nas operações bem sucedidas
 
