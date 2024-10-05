@@ -7,8 +7,7 @@
     <title> Atualização Cadastral </title>
 </head>
 <body style="background-color: greenyellow;" >
-    <center>
-    <br> <br> <br> 
+    <center><br> <br> <br> 
     <h1 style="color:black;"> *** Bem vindo ao Sistema Java Web Crud *** </h1>
     <br> <br> <br>
     <div>
