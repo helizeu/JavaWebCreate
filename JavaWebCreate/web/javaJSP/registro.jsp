@@ -13,7 +13,7 @@
     String sHTML = "";
 
     if (oper.equals("gravar")) {
-        if (user.buscarEmail()) {
+        if ( user.buscarEmail() ) {
             user.alterar();
             sHTML = "<center>Usuário Alterado com Sucesso!<br>"
                     + "<a href = '../index.html'> Voltar </a></center>";
